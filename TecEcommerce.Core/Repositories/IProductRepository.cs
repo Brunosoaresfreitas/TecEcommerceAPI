@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TecEcommerce.Core.Entities;
 
 namespace TecEcommerce.Core.Repositories
 {
-    internal class IProductRepository
+    public interface IProductRepository
     {
+        Task<List<Product>> GetAllAsync();
+        Task<Product> GetByIdAsync(Guid id);
+        Task CreateProductAsync(Product product);
+        Task DeleteProductAsync(Product product);
+        Task SaveChangesAsync();
     }
 }

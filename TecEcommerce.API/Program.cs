@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using TecEcommerce.Core.Repositories;
 using TecEcommerce.Infrastructure.Persistence;
+using TecEcommerce.Infrastructure.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,8 @@ var connectionString = builder.Configuration.GetConnectionString("TecEcommerceCs
 
 builder.Services.AddDbContext<TecEcommerceDbContext>(
     options => options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

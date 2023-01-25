@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TecEcommerce.Application.InputModels;
+using TecEcommerce.Application.ViewModels;
 using TecEcommerce.Core.Entities;
+using TecEcommerce.Core.Repositories;
 
 namespace TecEcommerce.API.Controllers
 {
@@ -8,15 +10,26 @@ namespace TecEcommerce.API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
+        private readonly IProductRepository _productRepository;
+
+        public ProductController(IProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
+
         // api/products
         /// <summary>
         /// Buscar todos os produtos
         /// </summary>
         /// <response code="200">Success</response>
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok();
+            var products = await _productRepository.GetAllAsync();
+
+            if (products == null) return null;
+
+            return Ok(products);
         }
 
         // api/products/1
@@ -27,9 +40,16 @@ namespace TecEcommerce.API.Controllers
         /// <response code="200">Success</response>
         /// <response code="404">Product not found</response>
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
-            return Ok();
+            var product = await _productRepository.GetByIdAsync(id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(product);
         }
 
         /// <summary>
@@ -43,9 +63,12 @@ namespace TecEcommerce.API.Controllers
         /// <response code="201">Success</response>
         /// <response code="400">Bad request: invalid data</response>
         [HttpPost]
-        public IActionResult Post([FromBody]ProductInputModel model)
+        public async Task<IActionResult> Post([FromBody]ProductInputModel model)
         {
             var product = new Product(model.Name, model.Description, model.Price, model.Category);
+
+            await _productRepository.CreateProductAsync(product);
+            await _productRepository.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetById), new { id = product.Id }, model);
         }
@@ -60,9 +83,17 @@ namespace TecEcommerce.API.Controllers
         /// <response code="400">Bad request: invalid data</response>
         /// <response code="404">Product not found</response>
         [HttpPut("{id}")]
-        public IActionResult Update(int id)
+        public async Task<IActionResult> Update(Guid id, [FromBody]ProductInputModel model)
         {
+            var product = await _productRepository.GetByIdAsync(id);
+
+            if (product == null) return null;
+
+            product.Update(model.Name, model.Description, model.Price, model.Category);
+            await _productRepository.SaveChangesAsync();
+
             return NoContent();
+
         }
 
         /// <summary>
@@ -73,8 +104,15 @@ namespace TecEcommerce.API.Controllers
         /// <response code="204">Success</response>
         /// <response code="404">Product not found</response>
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(Guid id)
         {
+            var product = await _productRepository.GetByIdAsync(id);
+
+            if (product == null) return null;
+
+            await _productRepository.DeleteProductAsync(product);
+            await _productRepository.SaveChangesAsync();
+
             return NoContent();
         }
     }

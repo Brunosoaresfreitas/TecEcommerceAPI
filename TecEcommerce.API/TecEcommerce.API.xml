@@ -10,7 +10,7 @@
             </summary>
             <response code="200">Success</response>
         </member>
-        <member name="M:TecEcommerce.API.Controllers.ProductController.GetById(System.Int32)">
+        <member name="M:TecEcommerce.API.Controllers.ProductController.GetById(System.Guid)">
             <summary>
             Buscar um produto por Id
             </summary>
@@ -30,7 +30,7 @@
             <response code="201">Success</response>
             <response code="400">Bad request: invalid data</response>
         </member>
-        <member name="M:TecEcommerce.API.Controllers.ProductController.Update(System.Int32)">
+        <member name="M:TecEcommerce.API.Controllers.ProductController.Update(System.Guid,TecEcommerce.Application.InputModels.ProductInputModel)">
             <summary>
             Atualizar um produto pelo seu Id
             </summary>
@@ -40,7 +40,7 @@
             <response code="400">Bad request: invalid data</response>
             <response code="404">Product not found</response>
         </member>
-        <member name="M:TecEcommerce.API.Controllers.ProductController.Delete(System.Int32)">
+        <member name="M:TecEcommerce.API.Controllers.ProductController.Delete(System.Guid)">
             <summary>
             Deletar um produto pelo seu Id
             </summary>
