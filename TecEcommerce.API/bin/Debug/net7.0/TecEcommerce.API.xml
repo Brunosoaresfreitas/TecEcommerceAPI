@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TecEcommerce.API</name>
+    </assembly>
+    <members>
+        <member name="M:TecEcommerce.API.Controllers.ProductController.GetAll">
+            <summary>
+            Buscar todos os produtos
+            </summary>
+            <response code="200">Success</response>
+        </member>
+        <member name="M:TecEcommerce.API.Controllers.ProductController.GetById(System.Int32)">
+            <summary>
+            Buscar um produto por Id
+            </summary>
+            <param name="id">Id do produto</param>
+            <response code="200">Success</response>
+            <response code="404">Product not found</response>
+        </member>
+        <member name="M:TecEcommerce.API.Controllers.ProductController.Post(TecEcommerce.Application.InputModels.ProductInputModel)">
+            <summary>
+            Cadastrar um produto
+            </summary>
+            <remarks>{
+            "name": "Logitech G403", "description": "A great mouse gamer", "price": 129, "category": 1 }
+            </remarks>
+            <param name="model">Dados do produto</param>
+            <returns>Produto cadastrado!</returns>
+            <response code="201">Success</response>
+            <response code="400">Bad request: invalid data</response>
+        </member>
+        <member name="M:TecEcommerce.API.Controllers.ProductController.Update(System.Int32)">
+            <summary>
+            Atualizar um produto pelo seu Id
+            </summary>
+            <param name="id">Id do produto</param>
+            <returns>Produto atualizado!</returns>
+            <response code="204">Success</response>
+            <response code="400">Bad request: invalid data</response>
+            <response code="404">Product not found</response>
+        </member>
+        <member name="M:TecEcommerce.API.Controllers.ProductController.Delete(System.Int32)">
+            <summary>
+            Deletar um produto pelo seu Id
+            </summary>
+            <param name="id">Id do produto</param>
+            <returns>Produto excluído!</returns>
+            <response code="204">Success</response>
+            <response code="404">Product not found</response>
+        </member>
+    </members>
+</doc>

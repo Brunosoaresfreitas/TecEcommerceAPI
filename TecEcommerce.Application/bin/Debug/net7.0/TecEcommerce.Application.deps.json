@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "TecEcommerce.Application/1.0.0": {
+        "dependencies": {
+          "TecEcommerce.Core": "1.0.0"
+        },
+        "runtime": {
+          "TecEcommerce.Application.dll": {}
+        }
+      },
+      "TecEcommerce.Core/1.0.0": {
+        "runtime": {
+          "TecEcommerce.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TecEcommerce.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TecEcommerce.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

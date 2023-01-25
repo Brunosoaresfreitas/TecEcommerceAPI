@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "y4TB7yqWG5Gg5zCHOYqTd6Q/VlCoFmyJDrIOb8UyjKU=",
+  "Source": "TecEcommerce.API",
+  "BasePath": "_content/TecEcommerce.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

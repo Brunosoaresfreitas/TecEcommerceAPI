@@ -1,0 +1,12 @@
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\bin\Debug\net7.0\TecEcommerce.Core.deps.json
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\bin\Debug\net7.0\TecEcommerce.Core.dll
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\bin\Debug\net7.0\TecEcommerce.Core.pdb
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\obj\Debug\net7.0\TecEcommerce.Core.csproj.AssemblyReference.cache
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\obj\Debug\net7.0\TecEcommerce.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\obj\Debug\net7.0\TecEcommerce.Core.AssemblyInfoInputs.cache
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\obj\Debug\net7.0\TecEcommerce.Core.AssemblyInfo.cs
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\obj\Debug\net7.0\TecEcommerce.Core.csproj.CoreCompileInputs.cache
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\obj\Debug\net7.0\TecEcommerce.Core.dll
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\obj\Debug\net7.0\refint\TecEcommerce.Core.dll
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\obj\Debug\net7.0\TecEcommerce.Core.pdb
+C:\ProjetosCS\TecEcommerce\TecEcommerce.Core\obj\Debug\net7.0\ref\TecEcommerce.Core.dll

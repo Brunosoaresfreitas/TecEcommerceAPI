@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TecEcommerce.Core\TecEcommerce.Core.csproj" />
+  </ItemGroup>
+
 </Project>

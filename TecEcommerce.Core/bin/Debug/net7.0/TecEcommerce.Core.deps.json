@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "TecEcommerce.Core/1.0.0": {
+        "runtime": {
+          "TecEcommerce.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TecEcommerce.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
