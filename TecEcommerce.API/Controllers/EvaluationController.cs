@@ -19,13 +19,13 @@ namespace TecEcommerce.API.Controllers
         /// <summary>
         /// Buscar todas as avaliações de um determinado produto
         /// </summary>
-        /// <param name="productId">Id do produto</param>
+        /// <param name="id">Id do produto</param>
         /// <response code="200">Success</response>
         /// <response code="404">Product Not Found</response>
         [HttpGet]
-        public async Task<IActionResult> GetAll(Guid productId)
+        public async Task<IActionResult> GetAll(Guid id)
         {
-            var evaluations = await _evaluationRepository.GetAllEvaluationByProductAsync(productId);
+            var evaluations = await _evaluationRepository.GetAllEvaluationByProductAsync(id);
 
             return Ok(evaluations);
         }
@@ -33,16 +33,16 @@ namespace TecEcommerce.API.Controllers
         /// <summary>
         /// Buscar uma avaliação específica de um produto
         /// </summary>
-        /// <param name="id">Id da avaliação</param>
-        /// <param name="productId">Id do produto</param>
+        /// <param name="id">Id do Produto</param>
+        /// <param name="evaluationId">Id da avaliação</param>
         /// <response code="200">Success</response>
         /// <response code="404">Not Found</response>
         [HttpGet("{evaluationId}")]
-        public async Task<IActionResult> GetById(Guid id, Guid productId)
+        public async Task<IActionResult> GetById(Guid id, Guid evaluationId)
         {
-            var evaluation = await _evaluationRepository.GetEvaluationByIdAsync(productId);
+            var evaluation = await _evaluationRepository.GetEvaluationByIdAsync(evaluationId);
 
-            if (evaluation == null) return null;
+            if (evaluation == null) return NotFound();
 
             return Ok(evaluation);
         }

@@ -6,6 +6,5 @@ namespace TecEcommerce.Application.InputModels
     {
         public ProductEvaluationEnum Evalution { get; set; }
         public string Comment { get; set; }
-        public Guid ProductId { get; set; }
     }
 }

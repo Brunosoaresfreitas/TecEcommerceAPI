@@ -8,7 +8,7 @@
             <summary>
             Buscar todas as avaliações de um determinado produto
             </summary>
-            <param name="productId">Id do produto</param>
+            <param name="id">Id do produto</param>
             <response code="200">Success</response>
             <response code="404">Product Not Found</response>
         </member>
@@ -16,8 +16,8 @@
             <summary>
             Buscar uma avaliação específica de um produto
             </summary>
-            <param name="id">Id da avaliação</param>
-            <param name="productId">Id do produto</param>
+            <param name="id">Id do Produto</param>
+            <param name="evaluationId">Id da avaliação</param>
             <response code="200">Success</response>
             <response code="404">Not Found</response>
         </member>
