@@ -1,5 +1,8 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using TecEcommerce.Application.Validators;
 using TecEcommerce.Core.Repositories;
 using TecEcommerce.Infrastructure.Persistence;
 using TecEcommerce.Infrastructure.Persistence.Repositories;
@@ -17,6 +20,11 @@ builder.Services.AddDbContext<TecEcommerceDbContext>(
     options => options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+
+// Configuring FluentValidator
+builder.Services.AddFluentValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateProductValidator>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

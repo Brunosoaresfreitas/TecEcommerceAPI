@@ -81,3 +81,6 @@ C:\ProjetosCS\TecEcommerce\TecEcommerce.API\bin\Debug\net7.0\Microsoft.Extension
 C:\ProjetosCS\TecEcommerce\TecEcommerce.API\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\ProjetosCS\TecEcommerce\TecEcommerce.API\bin\Debug\net7.0\System.CodeDom.dll
 C:\ProjetosCS\TecEcommerce\TecEcommerce.API\bin\Debug\net7.0\TecEcommerce.API.xml
+C:\ProjetosCS\TecEcommerce\TecEcommerce.API\bin\Debug\net7.0\FluentValidation.dll
+C:\ProjetosCS\TecEcommerce\TecEcommerce.API\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+C:\ProjetosCS\TecEcommerce\TecEcommerce.API\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll

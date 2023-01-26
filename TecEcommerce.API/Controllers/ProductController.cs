@@ -29,12 +29,16 @@ namespace TecEcommerce.API.Controllers
 
             if (products == null) return null;
 
-            return Ok(products);
+            var productsViewModel = products
+                .Select(p => new ProductViewModel(p.Id ,p.Name, p.Description, p.Price, p.Category))
+                .ToList();
+
+            return Ok(productsViewModel);
         }
 
         // api/products/1
         /// <summary>
-        /// Buscar um produto por Id
+        /// Buscar detalhadamente um produto por Id
         /// </summary>
         /// <param name="id">Id do produto</param>
         /// <response code="200">Success</response>
@@ -63,7 +67,7 @@ namespace TecEcommerce.API.Controllers
         /// <response code="201">Success</response>
         /// <response code="400">Bad request: invalid data</response>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody]ProductInputModel model)
+        public async Task<IActionResult> Post([FromBody] ProductInputModel model)
         {
             var product = new Product(model.Name, model.Description, model.Price, model.Category);
 
@@ -83,7 +87,7 @@ namespace TecEcommerce.API.Controllers
         /// <response code="400">Bad request: invalid data</response>
         /// <response code="404">Product not found</response>
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody]ProductInputModel model)
+        public async Task<IActionResult> Update(Guid id, [FromBody] ProductInputModel model)
         {
             var product = await _productRepository.GetByIdAsync(id);
 

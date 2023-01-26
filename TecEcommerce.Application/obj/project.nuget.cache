@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "L4s8VD6U1LAy+yk/6vmAsHIzx+crn3RcBxjy7DfsFsx7DUMj+xm7wTLF1pHnH1BNywXKHQ54cpZfALRmFkFRHg==",
+  "dgSpecHash": "cw4xqZfvTszrJfXkTYHR3sb7ldiVeVaL3lmCTBdmI9O3TJidKOc2Gq6vFy+esOzFR1v+81Eaz9zlXJRWqxx7zQ==",
   "success": true,
   "projectFilePath": "C:\\ProjetosCS\\TecEcommerce\\TecEcommerce.Application\\TecEcommerce.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Bruno\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\Bruno\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\Bruno\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
+    "C:\\Users\\Bruno\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
