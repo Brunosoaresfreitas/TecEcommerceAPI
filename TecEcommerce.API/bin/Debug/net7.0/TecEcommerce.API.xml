@@ -4,6 +4,33 @@
         <name>TecEcommerce.API</name>
     </assembly>
     <members>
+        <member name="M:TecEcommerce.API.Controllers.EvaluationController.GetAll(System.Guid)">
+            <summary>
+            Buscar todas as avaliações de um determinado produto
+            </summary>
+            <param name="productId">Id do produto</param>
+            <response code="200">Success</response>
+            <response code="404">Product Not Found</response>
+        </member>
+        <member name="M:TecEcommerce.API.Controllers.EvaluationController.GetById(System.Guid,System.Guid)">
+            <summary>
+            Buscar uma avaliação específica de um produto
+            </summary>
+            <param name="id">Id da avaliação</param>
+            <param name="productId">Id do produto</param>
+            <response code="200">Success</response>
+            <response code="404">Not Found</response>
+        </member>
+        <member name="M:TecEcommerce.API.Controllers.EvaluationController.Post(System.Guid,TecEcommerce.Application.InputModels.EvaluationInputModel)">
+            <summary>
+            Cadastrar uma avaliação em um produto
+            </summary>
+            <param name="id">Id do produto a ser avaliado</param>
+            <param name="model">Dados da avaliação</param>
+            <returns>Avaliação cadastrada!</returns>
+            <response code="201">Success</response>
+            <response code="400">Bad request: invalid data</response>
+        </member>
         <member name="M:TecEcommerce.API.Controllers.ProductController.GetAll">
             <summary>
             Buscar todos os produtos

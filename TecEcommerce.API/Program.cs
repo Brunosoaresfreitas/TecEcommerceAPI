@@ -20,7 +20,7 @@ builder.Services.AddDbContext<TecEcommerceDbContext>(
     options => options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-
+builder.Services.AddScoped<IEvaluationRepository, EvaluationRepository>();
 
 // Configuring FluentValidator
 builder.Services.AddFluentValidation();
